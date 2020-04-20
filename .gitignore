@@ -2,3 +2,4 @@ rugby
 ruggaz
 *.json
 .DS_Store
+.Rproj.user

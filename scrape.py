@@ -44,7 +44,6 @@ def get_games(d, urls):
             games.append(l.get_attribute('href'))
     return games
 
-
 # Get odds from one specific game url
 def get_odds(d, url):
     d.get(url)
@@ -102,10 +101,11 @@ def main(url):
     driver.close()
     print(json.dumps(results))    
 
+main("https://www.oddsportal.com/rugby-union/new-zealand/mitre-10-cup/results/")
 ## Run this!
-if(len(sys.argv) < 2):
-    print("\nRemember this requires URL!:\npython scrape.py https://oddsportal.com/rugby-result-url > output.json\n")
-else:
-    main(sys.argv[1])
+#if(len(sys.argv) < 2):
+#    print("\nRemember this requires URL!:\npython scrape.py https://oddsportal.com/rugby-result-url > output.json\n")
+#else:
+#    main("https://www.oddsportal.com/rugby-union/new-zealand/mitre-10-cup/results/")
 
 
